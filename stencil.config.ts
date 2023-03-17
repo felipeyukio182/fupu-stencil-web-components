@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'fupu-web-components',
+  namespace: 'fupu-stencil-web-components',
   outputTargets: [
     {
       type: 'dist',
