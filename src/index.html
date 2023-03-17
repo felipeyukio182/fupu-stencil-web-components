@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/fupu-web-components.esm.js"></script>
+    <script nomodule src="/build/fupu-web-components.js"></script>
+  </head>
+  <body>
+    <fupu-todo-list todo-title="outro title" todo-list='[{"name": "primeiro", "value": 44}, { "name": "segundo", "value": 333}]' ></fupu-todo-list>
+    <fupu-button label="aaaa"></fupu-button>
+    <fupu-input-text label="sdfddf" input-name="2222" input-id="11"></fupu-input-text>
+
+    <script>
+      const todo = document.querySelector("fupu-todo-list")
+      todo.addEventListener("fupuTodoListChange", e => console.log("todo", e.detail))
+      const btn = document.querySelector("fupu-button")
+      btn.addEventListener("fupuButtonClick", e => console.log(e.detail))
+      const inp = document.querySelector("fupu-input-text")
+      inp.addEventListener("fupuInputTextChange", e => console.log(e.detail))
+    </script>
+  </body>
+</html>
